@@ -3,7 +3,7 @@ var AllSkills = React.createClass({
     var skills = this.props.skills.map((skill) => {
       return (
         <div key={skill.id}>
-          <Skill skill={skill} removeFromDOM={this.props.removeFromDOM}/>
+          <Skill skill={skill} removeFromDOM={this.props.removeFromDOM} editInDOM={this.props.editInDOM}/>
         </div>
       )
     });

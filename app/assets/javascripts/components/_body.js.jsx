@@ -20,12 +20,19 @@ var Body = React.createClass({
    this.setState({ skills: newSkills });
   },
 
+  editInDOM(skill){
+    var skills = this.state.skills.filter((s) => { return s.id != skill.id });
+    skills.push(skill);
+
+    this.setState({ skills: skills });
+  },
+
   render(){
     return(
       <div>
         <h1>Body</h1>
         <NewSkill handleSubmit={this.handleSubmit}/>
-        <AllSkills skills={this.state.skills} removeFromDOM={this.removeFromDOM}/>
+        <AllSkills skills={this.state.skills} removeFromDOM={this.removeFromDOM} editInDOM={this.editInDOM}/>
       </div>
     )
   }
