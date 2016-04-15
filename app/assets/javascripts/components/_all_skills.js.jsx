@@ -5,13 +5,13 @@ var AllSkills = React.createClass({
         <div key={skill.id}>
           <Skill skill={skill} removeFromDOM={this.props.removeFromDOM} editInDOM={this.props.editInDOM}/>
         </div>
-      )
+      );
     });
 
     return(
      <div>
        {skills}
      </div>
-    )
+   );
   }
-})
+});

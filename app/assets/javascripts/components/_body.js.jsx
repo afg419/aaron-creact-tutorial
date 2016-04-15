@@ -34,6 +34,6 @@ var Body = React.createClass({
         <NewSkill handleSubmit={this.handleSubmit}/>
         <AllSkills skills={this.state.skills} removeFromDOM={this.removeFromDOM} editInDOM={this.editInDOM}/>
       </div>
-    )
+    );
   }
 })
